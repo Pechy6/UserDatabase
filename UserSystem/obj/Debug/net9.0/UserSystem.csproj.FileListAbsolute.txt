@@ -1,0 +1,14 @@
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/bin/Debug/net9.0/UserSystem
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/bin/Debug/net9.0/UserSystem.deps.json
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/bin/Debug/net9.0/UserSystem.runtimeconfig.json
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/bin/Debug/net9.0/UserSystem.dll
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/bin/Debug/net9.0/UserSystem.pdb
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.AssemblyInfoInputs.cache
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.AssemblyInfo.cs
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.csproj.CoreCompileInputs.cache
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.dll
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/refint/UserSystem.dll
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.pdb
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.genruntimeconfig.cache
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/ref/UserSystem.dll
