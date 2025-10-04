@@ -8,6 +8,11 @@ public class UserManager
     {
         _database.Add(user);
     }
+    
+    public void RemoveUser(User user)
+    {
+        _database.Remove(user);
+    }
 
     public void WriteAllUsers()
     {
@@ -37,40 +42,4 @@ public class UserManager
         var d = DateOnly.FromDateTime(date);
         return _database.Find(u => DateOnly.FromDateTime(u.DateRegistered) == d).FirstOrDefault();
     }
-
-    // public void FindUsersById(int id)
-    // {
-    //     var found = _database.Find(u => u.Id == id);
-    //     foreach (var user in found)
-    //     {
-    //         user.ShowDashboard();
-    //     }
-    // }
-    //
-    // public void FindUsersByName(string name)
-    // {
-    //     var found = _database.Find(u => u.UserName == name);
-    //     foreach (var user in found)
-    //     {
-    //         user.ShowDashboard();
-    //     }
-    // }
-    //
-    // public void FindUsersByEmail(string email)
-    // {
-    //     var found = _database.Find(u => u.EMail == email);
-    //     foreach (var user in found)
-    //     {
-    //         user.ShowDashboard();
-    //     }
-    // }
-    //
-    // public void FindUsersByDate(DateTime date)
-    // {
-    //     var found = _database.Find(u => u.DateRegistered == date);
-    //     foreach (var user in found)
-    //     {
-    //         user.ShowDashboard();
-    //     }
-    // }
 }

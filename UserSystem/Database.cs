@@ -8,6 +8,11 @@ public class Database<T>
     {
         _items.Add(item);
     }
+    
+    public void Remove(T item)
+    {
+        _items.Remove(item);
+    }
 
     public IEnumerable<T> GetAll()
     {

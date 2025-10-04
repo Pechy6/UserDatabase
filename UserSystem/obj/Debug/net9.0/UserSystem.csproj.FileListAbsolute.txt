@@ -12,3 +12,4 @@
 /Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.pdb
 /Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.genruntimeconfig.cache
 /Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/ref/UserSystem.dll
+/Users/patrikpech/Desktop/Práce 2025/Studium/Web/C#/MyProjects/UserSystem/UserSystem/obj/Debug/net9.0/UserSystem.sourcelink.json

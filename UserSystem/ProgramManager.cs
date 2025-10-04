@@ -76,6 +76,7 @@ public class ProgramManager
             {
                 case 1:
                     userManager.AddUser(new RegularUser(name, email));
+                    Console.WriteLine($"Regular user {name} has been created.");
                     Console.Clear();
                     break;
                 case 2:
@@ -97,9 +98,8 @@ public class ProgramManager
     {
         while (true)
         {
-            
             DisplayFindUser();
-            
+
             int action;
             while (!int.TryParse(Console.ReadLine(), out action))
             {
@@ -107,7 +107,7 @@ public class ProgramManager
                 Console.WriteLine("You must enter a number.");
             }
 
-            if (action > 6)
+            if (action > 7 || action <= 0)
             {
                 continue;
             }
@@ -143,6 +143,11 @@ public class ProgramManager
                     break;
                 case 6:
                     Console.Clear();
+                    RemoveUser();
+                    DisplayContinue();
+                    break;
+                case 7:
+                    Console.Clear();
                     return;
                 default:
                     Console.WriteLine("Invalid action.");
@@ -150,7 +155,27 @@ public class ProgramManager
             }
         }
     }
-    
+
+
+    private void RemoveUser()
+    {
+        while (true)
+        {
+            DisplayRemoveUser();
+            var id = _userValidator.GetValidId();
+            var user = userManager.FindUserById(id);
+            if (user is null)
+            {
+                Console.WriteLine("User not found.");
+                return;
+            }
+
+            userManager.RemoveUser(user);
+            Console.WriteLine($"User {user.UserName} has been deleted.");
+            return;
+        }
+    }
+
     // ACTION METHODS FOR FIND USER
     private void FindUserByName() // BY NAME
     {
@@ -161,11 +186,13 @@ public class ProgramManager
             Console.WriteLine("User not found.");
             return;
         }
+
         user.ShowDashboard();
     }
 
     private void FindUserById() // BY ID
     {
+        Console.Write("Enter id: ");
         var id = _userValidator.GetValidId();
         var user = userManager.FindUserById(id);
         if (user is null)
@@ -173,10 +200,11 @@ public class ProgramManager
             Console.WriteLine("User not found.");
             return;
         }
+
         user.ShowDashboard();
     }
 
-    private void FindUserByEmail()
+    private void FindUserByEmail() // BY EMAIL
     {
         var email = _userValidator.GetValidEmail();
         var user = userManager.FindUserByEmail(email);
@@ -185,10 +213,11 @@ public class ProgramManager
             Console.WriteLine("User not found");
             return;
         }
+
         user.ShowDashboard();
     }
 
-    private void FindUserByDate()
+    private void FindUserByDate() // BY DATE
     {
         var date = _userValidator.GetValidDate();
         var user = userManager.FindUserByDate(date);
@@ -197,6 +226,7 @@ public class ProgramManager
             Console.WriteLine("User not found");
             return;
         }
+
         user.ShowDashboard();
     }
 
@@ -207,9 +237,8 @@ public class ProgramManager
         var email = _userValidator.GetValidEmail();
         return (name, email);
     }
-    
-    
-    
+
+
     // DISPLAY MENU
     private void DisplayMainMenu()
     {
@@ -219,14 +248,14 @@ public class ProgramManager
         Console.WriteLine("2. Write all users");
         Console.WriteLine("3. Exit");
     }
-    
+
     private void DisplayUserMenu()
     {
         Console.WriteLine("USER SYSTEM made by Pechy6\n");
         Console.WriteLine("CREAT USER");
         Console.WriteLine("1. Regular user\n2. Moderator\n3. Admin\n4.Back to main menu");
     }
-    
+
     private void DisplayFindUser()
     {
         Console.WriteLine("USER SYSTEM made by Pechy6\n");
@@ -236,7 +265,8 @@ public class ProgramManager
         Console.WriteLine("3. Find by email");
         Console.WriteLine("4. Find by date of registration");
         Console.WriteLine("5. Find all users");
-        Console.WriteLine("6. Back to main menu");
+        Console.WriteLine("6. Remove user by id");
+        Console.WriteLine("7. Back to main menu");
     }
 
     private void DisplayContinue()
@@ -244,5 +274,11 @@ public class ProgramManager
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
         Console.Clear();
+    }
+
+    private void DisplayRemoveUser()
+    {
+        Console.WriteLine("Delete user by id:");
+        Console.Write("Enter id: ");
     }
 }
